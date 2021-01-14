@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+body{
+    margin: 0;
+    padding: 0;
+    background-color: hsl(0, 0%, 98%);
+    font-family: Poppins;
+    overflow: hidden;
+}
+
+main{
+    width: 90%;
+    margin: 0 auto;
+}
+
+header{
+    text-align: center;
+}
+
+span{
+    font-weight: 100;
+}
+
+section{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr ;
+    grid-template-rows:1fr 1fr;
+    grid-template-areas: '... div1 ...'
+                        'div2 div3 div4';
+    height: 70vh;
+    grid-gap: 20px;
+}
+
+.pad{
+    width: 80%;
+    margin: 0 auto;
+}
+
+.supervisor{
+    grid-area: div2;
+    height: 100%;
+    width: 100%;
+    background-color: white;
+    position: relative;
+    bottom: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.supervisor-color{
+    background-color: hsl(180, 62%, 55%);
+    height: 5px;
+}
+
+.team-Builder{
+    grid-area: div1;
+    height: 100%;
+    width: 100%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.team-Builder-color{
+    background-color:hsl(0, 78%, 62%) ;
+    height: 5px;
+}
+
+.karma{
+    grid-area: div3;
+    height: 100%;
+    width: 100%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.karma-color{
+    background-color: hsl(34, 97%, 64%);
+    height: 5px;
+}
+
+.calculator{
+    grid-area: div4;
+    height: 100%;
+    width: 100%;
+    background-color: white;
+    position: relative;
+    bottom: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.calculator-color{
+    background-color: hsl(212, 86%, 64%);
+    height: 5px;
+}
+
+.image{
+    width: 80%;
+    margin: 0 auto;
+    text-align: right;
+}
+
+@media only screen and (max-width: 760px){
+    section{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows:1fr;
+        grid-template-areas: 'div1'
+                            'div2'
+                            'div3' 
+                            'div4';
+        height: auto;
+        grid-gap:none;
+    }
+
+    .team-Builder{
+        grid-area: div1;
+        height: 100%;
+        width: 100%;
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .supervisor{
+        grid-area: div2;
+        height: 100%;
+        width: 100%;
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        position: static;
+    }
+    
+    
+    .karma{
+        grid-area: div3;
+        height: 100%;
+        width: 100%;
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .calculator{
+        grid-area: div4;
+        height: 100%;
+        width: 100%;
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        position: static;
+    }
+}
